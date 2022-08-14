@@ -42,10 +42,12 @@ public class RetryConfig {
         SimpleRetryPolicy retryPolicy = new SimpleRetryPolicy();
         retryPolicy.setMaxAttempts(5);
 
+        var retryListener = new RetryListener();
 
         RetryTemplate retryTemplate = new RetryTemplate();
         retryTemplate.setRetryPolicy(retryPolicy);
         retryTemplate.setBackOffPolicy(backOffPolicy);
+        retryTemplate.registerListener(retryListener);
 
         return retryTemplate;
     }

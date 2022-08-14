@@ -3,7 +3,6 @@ package com.example.retryapi;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,7 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class FlakeServiceTest {
 
     @Autowired
-    RetryFlakeService flakeService;
+    BetterRetryFlakeService flakeService;
+//    @Autowired
+//    BasicRetryFlakeService flakeService;
 
     @DisplayName("send flake test, does not throw")
     @Test

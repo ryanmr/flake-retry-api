@@ -9,13 +9,13 @@ import java.time.Instant;
 
 @Slf4j
 @Service
-public class RetryFlakeService implements FlakeService {
+public class BetterRetryFlakeService implements FlakeService {
 
     private final DirectFlakeService flakeService;
     private final RetryTemplate retryTemplate;
 
     @Autowired
-    public RetryFlakeService(DirectFlakeService flakeService, RetryTemplate retryTemplate) {
+    public BetterRetryFlakeService(DirectFlakeService flakeService, RetryTemplate retryTemplate) {
         this.flakeService = flakeService;
         this.retryTemplate = retryTemplate;
     }

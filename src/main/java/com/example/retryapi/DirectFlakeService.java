@@ -29,7 +29,7 @@ public class DirectFlakeService implements FlakeService {
         }
 
         // tune this variable for how often upstream should be unavailable
-        var failRatio = .85;
+        var failRatio = .95;
         var failRandom = Math.random();
         var shouldFail = failRandom < failRatio;
 
