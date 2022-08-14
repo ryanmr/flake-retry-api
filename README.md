@@ -38,3 +38,7 @@ Unexpected exception thrown: com.example.retryapi.FlakeRetryException: 123 excee
 org.opentest4j.AssertionFailedError: Unexpected exception thrown: com.example.retryapi.FlakeRetryException: 123 exceeded retries count 5 in 88149
 	at app//org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:83)
 ```
+
+## Other
+
+I tried adding a fibonacci based backoff, it's possible but might be just too much work for not much more value than the Expo-based version.
